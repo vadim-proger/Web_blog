@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Заголовок страницы</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'mainPage/css/bootstrap.min.css' %}" type="text/css">
+    </head>
+    <body style="background-color: aqua;">
+        <div class="jumbotron">
+            <div class="container">
+              <h1>{% include "mainPage/includes/included_html.html" %}</h1>
+              {% block content %}
+              {% endblock %}
+              <p>
+                <a href="/" class="btn btn-success btn-lg">Главная страница</a>
+                <a href="/articles" class="btn btn-primary btn-lg">Статьи &raquo;</a>
+                <a href="/contacts" class="btn btn-info btn-lg">Контакты </a>
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <img src="{% static 'mainPage/img/blog.jpg' %}" class="img-thumbnail">
+            <hr>
+            &copy; Все права защищены 2020
+          </div>
+    </body>
+</html>

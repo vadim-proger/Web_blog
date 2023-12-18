@@ -1,1 +1,2 @@
-# Web_blog
+# Web-blog
+Web blog with Django
